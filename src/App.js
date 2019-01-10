@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Browse from './components/Browse'
+import Menu from './components/Menu'
 import Random from './components/Random'
 import Search from './components/Search'
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
       <Router>
         <div>
           <div>
-            Menu
+            <Menu/>
           </div>
           <Route exact path="/" component={Browse} />
           <Route exact path="/search" component={Search} />
