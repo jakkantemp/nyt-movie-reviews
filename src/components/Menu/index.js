@@ -24,7 +24,6 @@ function Menu() {
         <Container>
             <Item exact to="/">Browse</Item>
             <Item exact to="/search">Search</Item>
-            <Item exact to="/random">Random</Item>
         </Container>
     )
 }
