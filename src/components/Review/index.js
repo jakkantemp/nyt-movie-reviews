@@ -1,14 +1,16 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Review = styled.div`
-    padding: 5px 15px;
-`;
+function Review(props) {
+    const Item = styled.div`
+        padding: 5px 15px;
+        cursor: pointer;
+        font-weight: ${props.active ? 700 : 400};
+    `;
 
-function Menu(props) {
     return (
-        <Review>{props.displayTitle}</Review>
-    )
+        <Item onClick={(e) => props.handleClick(e, props.id)}>{props.displayTitle}</Item>
+    );
 }
 
-export default Menu;
+export default Review;

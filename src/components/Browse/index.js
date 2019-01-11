@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Review from '../Review';
+import Reviews from '../Reviews';
 
 class Browse extends Component {
     constructor(props) {
@@ -28,13 +28,9 @@ class Browse extends Component {
     }
     
     render() {
-        const reviews = this.state.reviews.map((review) => 
-            <Review key={review.link.url} displayTitle={review.display_title}/>
-        );
-
         return (
             <div>
-                {reviews}
+                <Reviews reviews={this.state.reviews}/>
             </div>
         )
     }
