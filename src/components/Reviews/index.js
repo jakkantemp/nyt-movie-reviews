@@ -6,7 +6,7 @@ class Reviews extends Component {
         super(props);
 
         this.state = {
-            activeReviewId: null
+            activeReviewId: ''
         }
     }
 
