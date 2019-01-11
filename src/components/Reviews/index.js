@@ -20,6 +20,7 @@ class Reviews extends Component {
                 key={review.link.url}
                 id={review.link.url}
                 displayTitle={review.display_title}
+                summary={review.summary_short}
                 handleClick={this.activate}
                 active={review.link.url === this.state.activeReviewId}
             />
