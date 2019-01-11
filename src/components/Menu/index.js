@@ -1,20 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
 
-function Browse() {
+const Container = styled.nav`
+    display: flex;
+`;
+
+const Item = styled(NavLink)`
+    padding: 15px;
+
+    &.active {
+        font-weight: 700;
+    }
+
+    &, &:hover, &:active {
+        text-decoration: unset;
+        color: unset;
+    }
+`;
+
+function Menu() {
     return (
-        <nav>
-            <div>
-                <Link to="/">Browse</Link>
-            </div>
-            <div>
-                <Link to="/search">Search</Link>
-            </div>
-            <div>
-                <Link to="/random">Random</Link>
-            </div>
-        </nav>
+        <Container>
+            <Item exact to="/">Browse</Item>
+            <Item exact to="/search">Search</Item>
+            <Item exact to="/random">Random</Item>
+        </Container>
     )
 }
 
-export default Browse;
+export default Menu;
